@@ -16,6 +16,10 @@ namespace BatRenamer
             OriginalName = originalName;
             ToRename = toRename;
         }
+        public string GetLine() 
+        {
+            return $"ren {OriginalName} {ToRename}";
+        }
     }
 
 }

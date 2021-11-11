@@ -8,23 +8,23 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\verta\\.nuget\\packages\\": {},
+    "C:\\Users\\weverton.ferreira\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer\\BatRenamer.csproj",
+      "projectUniqueName": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer\\BatRenamer.csproj",
       "projectName": "BatRenamer",
-      "projectPath": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer\\BatRenamer.csproj",
-      "packagesPath": "C:\\Users\\verta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer\\obj\\",
+      "projectPath": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer\\BatRenamer.csproj",
+      "packagesPath": "C:\\Users\\weverton.ferreira\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\verta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\weverton.ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -60,20 +60,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
