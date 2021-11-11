@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 
-namespace BatRenamer
+namespace BatRenamer.Entities
 {
     public class BatBuilder
     {
@@ -31,5 +32,19 @@ namespace BatRenamer
         {
             return batText().ToString();
         }
+
+        public void CreateAndWriteFile(string path)
+        {
+            string content = getBatText();
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                sw.Write(content);
+            }
+        }
+    //    public void Execute(string path) 
+    //    {
+    //        string[] path2 = Directory.GetDirectories(path);
+    //        System.Diagnostics.Process.Start(@"C:\\Users\weverton.ferreira\Desktop\Nova pasta\Renamer.bat");
+    //    }
     }
 }
