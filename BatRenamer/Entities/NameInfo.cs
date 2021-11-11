@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace BatRenamer.Entities
+﻿namespace BatRenamer.Entities
 {
     public class NameInfo
     {
