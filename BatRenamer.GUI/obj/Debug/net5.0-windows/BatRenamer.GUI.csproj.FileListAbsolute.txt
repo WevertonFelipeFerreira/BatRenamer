@@ -16,3 +16,6 @@ C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.GUI\obj\Debug\net5
 C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.GUI\obj\Debug\net5.0-windows\ref\BatRenamer.GUI.dll
 C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.GUI\obj\Debug\net5.0-windows\BatRenamer.GUI.pdb
 C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.GUI\obj\Debug\net5.0-windows\BatRenamer.GUI.genruntimeconfig.cache
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.GUI\bin\Debug\net5.0-windows\BatRenamer.Models.dll
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.GUI\bin\Debug\net5.0-windows\BatRenamer.Models.pdb
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.GUI\obj\Debug\net5.0-windows\BatRenamer.GUI.csproj.CopyComplete

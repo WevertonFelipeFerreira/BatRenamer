@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BatRenamer.Models\BatRenamer.Models.csproj" />
+  </ItemGroup>
+
 </Project>
