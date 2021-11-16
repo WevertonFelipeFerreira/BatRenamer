@@ -1,0 +1,12 @@
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\bin\Debug\net5.0\BatRenamer.Models.deps.json
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\bin\Debug\net5.0\BatRenamer.Models.dll
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\bin\Debug\net5.0\ref\BatRenamer.Models.dll
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\bin\Debug\net5.0\BatRenamer.Models.pdb
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\BatRenamer.Models.csproj.AssemblyReference.cache
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\BatRenamer.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\BatRenamer.Models.AssemblyInfoInputs.cache
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\BatRenamer.Models.AssemblyInfo.cs
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\BatRenamer.Models.csproj.CoreCompileInputs.cache
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\BatRenamer.Models.dll
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\ref\BatRenamer.Models.dll
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\BatRenamer.Models.pdb

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
-using BatRenamer.Entities;
-using BatRenamer.Services;
-using BatRenamer.Exceptions;
+using BatRenamer.Models.Entities;
+using BatRenamer.Models.Services;
+using BatRenamer.Models.Exceptions;
 
 namespace BatRenamer
 {

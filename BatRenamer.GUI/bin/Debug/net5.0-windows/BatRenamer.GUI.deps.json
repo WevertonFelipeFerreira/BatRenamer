@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "BatRenamer.GUI/1.0.0": {
+        "runtime": {
+          "BatRenamer.GUI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BatRenamer.GUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

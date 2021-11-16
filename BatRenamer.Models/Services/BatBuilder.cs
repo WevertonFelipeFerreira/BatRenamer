@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using BatRenamer.Entities;
+using BatRenamer.Models.Entities;
 
-namespace BatRenamer.Services
+namespace BatRenamer.Models.Services
 {
     public class BatBuilder
     {
@@ -43,7 +43,7 @@ namespace BatRenamer.Services
             }
             catch (IOException e) 
             {
-                throw new IOException("Folder not found!");
+                throw new IOException("Folder not found! "+e.Message);
             }
         }
 

@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "BatRenamer.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BatRenamer.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BatRenamer.Models.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BatRenamer.Models/1.0.0": {
+      "type": "project",
+      "path": "../BatRenamer.Models/BatRenamer.Models.csproj",
+      "msbuildProject": "../BatRenamer.Models/BatRenamer.Models.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "BatRenamer.Models >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\weverton.ferreira\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj": {
+              "projectPath": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

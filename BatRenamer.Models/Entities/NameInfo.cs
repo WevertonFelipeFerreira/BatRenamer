@@ -1,4 +1,4 @@
-﻿namespace BatRenamer.Entities
+﻿namespace BatRenamer.Models.Entities
 {
     public class NameInfo
     {
