@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using BatRenamer.Models.Exceptions;
 
@@ -16,6 +10,8 @@ namespace BatRenamer.GUI
         public PrimaryForm()
         {
             InitializeComponent();
+            ToolTip TTbtnDialogFile = new ToolTip();
+            TTbtnDialogFile.SetToolTip(this.btnDialogFile, "Will open a box for you to select a folder.");
         }
 
         private void btnDialogFile_Click(object sender, EventArgs e)
@@ -24,14 +20,26 @@ namespace BatRenamer.GUI
             {
                 FolderBrowserDialog fbd = new FolderBrowserDialog();
                 string path = @GetPath();
+                GBNameList.Enabled = true;
                 txtDirectory.Text = path;
                 string pathWithArchive = @path + @"\Renamer.bat";
             }
             catch (IncorrectFolderException x) 
             {
                 MessageBox.Show(x.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
             }
-            
+            catch (StringStructureException x)
+            {
+                MessageBox.Show(x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            catch (IOException x)
+            {
+                MessageBox.Show(x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
         }
         private string GetPath()
         {
@@ -44,5 +52,7 @@ namespace BatRenamer.GUI
             }
             throw new IncorrectFolderException("The folder is not correct!");
         }
+
+      
     }
 }

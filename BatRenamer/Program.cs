@@ -22,7 +22,7 @@ namespace BatRenamer
                 string path = @Console.ReadLine();
                 string pathWithArchive = @path + @"\Renamer.bat";
                 bool cont = true;
-                Console.WriteLine($"\nEnter the original filename, then enter the name you want to rename, separated by a semicolon.EX: '{formatExample}'\n");
+                Console.WriteLine($"\nEnter the original file names, then enter the name you want to rename, separated by a semicolon.EX: '{formatExample}'\n");
                 do
                 {
                     string c = Console.ReadLine();
