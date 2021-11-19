@@ -2,6 +2,7 @@
 using System.Text;
 using System.IO;
 using BatRenamer.Models.Entities;
+using System.Diagnostics;
 
 namespace BatRenamer.Models.Services
 {
@@ -49,10 +50,11 @@ namespace BatRenamer.Models.Services
 
         public void Execute(string pathWithArchive,string pathBase) 
         {
-            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            Process proc = new Process();
             proc.StartInfo.FileName = pathWithArchive;
             proc.StartInfo.WorkingDirectory = pathBase;
             proc.Start();
+            proc.WaitForExit(9000);
         }
 
         public void RemoveBat(string path) 

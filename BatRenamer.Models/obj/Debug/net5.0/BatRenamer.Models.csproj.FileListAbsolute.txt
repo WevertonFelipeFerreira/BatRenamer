@@ -10,3 +10,5 @@ C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\n
 C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\BatRenamer.Models.dll
 C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\ref\BatRenamer.Models.dll
 C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\BatRenamer.Models.pdb
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\BatRenamer.Models.Messages.resources
+C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer.Models\obj\Debug\net5.0\BatRenamer.Models.csproj.GenerateResource.cache

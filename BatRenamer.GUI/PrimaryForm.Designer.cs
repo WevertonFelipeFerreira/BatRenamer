@@ -33,13 +33,14 @@ namespace BatRenamer.GUI
             this.btnDialogFile = new System.Windows.Forms.Button();
             this.txtDirectory = new System.Windows.Forms.TextBox();
             this.GBNameList = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.btnRename = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNamesInfo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.GBNameList.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -76,28 +77,37 @@ namespace BatRenamer.GUI
             // 
             // GBNameList
             // 
-            this.GBNameList.Controls.Add(this.button1);
+            this.GBNameList.Controls.Add(this.progressBar);
+            this.GBNameList.Controls.Add(this.btnRename);
             this.GBNameList.Controls.Add(this.label4);
             this.GBNameList.Controls.Add(this.label3);
             this.GBNameList.Controls.Add(this.label2);
-            this.GBNameList.Controls.Add(this.textBox1);
+            this.GBNameList.Controls.Add(this.txtNamesInfo);
             this.GBNameList.Enabled = false;
             this.GBNameList.Location = new System.Drawing.Point(12, 113);
             this.GBNameList.Name = "GBNameList";
-            this.GBNameList.Size = new System.Drawing.Size(488, 318);
+            this.GBNameList.Size = new System.Drawing.Size(488, 348);
             this.GBNameList.TabIndex = 3;
             this.GBNameList.TabStop = false;
             this.GBNameList.Text = "Names list";
             // 
-            // button1
+            // progressBar
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(196, 265);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 38);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "RENAME";
-            this.button1.UseVisualStyleBackColor = true;
+            this.progressBar.Location = new System.Drawing.Point(59, 263);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(367, 35);
+            this.progressBar.TabIndex = 5;
+            // 
+            // btnRename
+            // 
+            this.btnRename.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRename.Location = new System.Drawing.Point(195, 304);
+            this.btnRename.Name = "btnRename";
+            this.btnRename.Size = new System.Drawing.Size(98, 38);
+            this.btnRename.TabIndex = 4;
+            this.btnRename.Text = "RENAME";
+            this.btnRename.UseVisualStyleBackColor = true;
+            this.btnRename.Click += new System.EventHandler(this.btnRename_Click);
             // 
             // label4
             // 
@@ -129,17 +139,18 @@ namespace BatRenamer.GUI
             this.label2.TabIndex = 1;
             this.label2.Text = "Enter the original file names, then enter the name you want to rename,";
             // 
-            // textBox1
+            // txtNamesInfo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(59, 80);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(367, 173);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "OriginalName.jpg;Renamed.jpg\r\nOriginalName2.jpg;Renamed2.jpg\r\nOriginalName3.jpg;R" +
+            this.txtNamesInfo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNamesInfo.Location = new System.Drawing.Point(59, 80);
+            this.txtNamesInfo.Multiline = true;
+            this.txtNamesInfo.Name = "txtNamesInfo";
+            this.txtNamesInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtNamesInfo.Size = new System.Drawing.Size(367, 173);
+            this.txtNamesInfo.TabIndex = 0;
+            this.txtNamesInfo.Text = "OriginalName.jpg;Renamed.jpg\r\nOriginalName2.jpg;Renamed2.jpg\r\nOriginalName3.jpg;R" +
     "enamed3.jpg\r\nOriginalName4.jpg;Renamed4.jpg";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNamesInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox1
             // 
@@ -153,24 +164,28 @@ namespace BatRenamer.GUI
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Folder area";
             // 
-            // button2
+            // btnReset
             // 
-            this.button2.Location = new System.Drawing.Point(425, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnReset.Location = new System.Drawing.Point(425, 4);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 5;
+            this.btnReset.Text = "button2";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // PrimaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 443);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(521, 473);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.GBNameList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "PrimaryForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PrimaryForm";
             this.GBNameList.ResumeLayout(false);
             this.GBNameList.PerformLayout();
@@ -186,12 +201,13 @@ namespace BatRenamer.GUI
         private System.Windows.Forms.Button btnDialogFile;
         private System.Windows.Forms.TextBox txtDirectory;
         private System.Windows.Forms.GroupBox GBNameList;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNamesInfo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRename;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
