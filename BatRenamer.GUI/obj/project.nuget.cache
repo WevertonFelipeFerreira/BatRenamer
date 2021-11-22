@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "LYq4WhEnn+pzADT8ddOKQxIwmtnZO9itxbdI2lslVVuhKriOwjwZ1Eu2IKqYV1rWF3YDyBKgiTL/Qx8zaZyOBA==",
+  "dgSpecHash": "ovOZl1CBS2RGXtooGfif1ZZMTBq/WpzPV/CM6LCTsk21Dfbc5dzItXZXl34Pmx3TfSimkNuLzaNiXbOgRyC/Lg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.GUI\\BatRenamer.GUI.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.GUI\\BatRenamer.GUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\verta\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\verta\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\verta\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

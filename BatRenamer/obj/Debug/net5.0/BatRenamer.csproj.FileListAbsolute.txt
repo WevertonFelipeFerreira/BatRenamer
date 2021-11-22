@@ -33,3 +33,6 @@ C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer\obj\Debug\net5.0\B
 C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer\bin\Debug\net5.0\BatRenamer.Models.dll
 C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer\bin\Debug\net5.0\BatRenamer.Models.pdb
 C:\Users\weverton.ferreira\source\repos\BatRenamer\BatRenamer\obj\Debug\net5.0\BatRenamer.csproj.CopyComplete
+C:\Users\verta\source\repos\BatRenamer\BatRenamer\bin\Debug\net5.0\BatRenamer.Models.dll
+C:\Users\verta\source\repos\BatRenamer\BatRenamer\bin\Debug\net5.0\BatRenamer.Models.pdb
+C:\Users\verta\source\repos\BatRenamer\BatRenamer\obj\Debug\net5.0\BatRenamer.csproj.CopyComplete

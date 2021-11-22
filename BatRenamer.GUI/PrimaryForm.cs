@@ -6,6 +6,7 @@ using BatRenamer.Models.Exceptions;
 using BatRenamer.Models.Entities;
 using BatRenamer.Models;
 using BatRenamer.Models.Services;
+using System.Media;
 
 namespace BatRenamer.GUI
 {
@@ -48,6 +49,10 @@ namespace BatRenamer.GUI
                 MessageBox.Show(x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            catch (Break x)
+            {
+
+            }
 
         }
         private string GetPath()
@@ -59,45 +64,78 @@ namespace BatRenamer.GUI
                 path = @fbd.SelectedPath;
                 return path;
             }
-            throw new IncorrectFolderException("The folder is not correct!");
+            else
+            {
+                throw new Break();
+            }
+            throw new IncorrectFolderException("Incorrect folder.");
         }
 
         private void btnRename_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNamesInfo.Text))
+            try
             {
-                MessageBox.Show("Empty Text.", "WARNING!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (string.IsNullOrEmpty(txtNamesInfo.Text))
+                {
+                    MessageBox.Show("Empty Text.", "WARNING!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                foreach (var item in txtNamesInfo.Lines)
+                {
+                    string c = item.Trim().Replace("\t", "");
+
+                    if (!c.Contains(";") && !c.Contains("."))
+                    {
+                        throw new StringStructureException($"INVALID FORMAT! Format must be like: {Messages.formatExample}");
+                    }
+
+                    string[] fullString = c.Split(";");
+                    string verifyOne = fullString[0];
+                    string verifyTwo = fullString[1];
+                    if (!verifyOne.Contains(".") && !verifyTwo.Contains(".")) 
+                    {
+                        throw new StringStructureException("Incorrect string structure.");
+                    }
+                    list.Add(new NameInfo(fullString[0], fullString[1]));
+                }
+                FormatTxtNamesInfo();
+                BatBuilder b = new BatBuilder(list);
+                progressBar.Value = 2;
+                b.CreateAndWriteFile(pathWithArchive);
+                b.Execute(pathWithArchive, path);
+
+                // ProgressBar
+                int maximun = list.Count;
+                progressBar.Maximum = maximun;
+                for (int i = 0; i <= maximun; i++)
+                {
+                    progressBar.Value = i;
+                }
+                b.RemoveBat(pathWithArchive);
+                SoundPlayer player = new SoundPlayer(Resources.NotifySound);
+                player.Play();
+                MessageBox.Show("All file(s) renamed.", "Success!");
+                Reset();
+            }
+            catch (IncorrectFolderException x)
+            {
+                MessageBox.Show(x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            foreach (var item in txtNamesInfo.Lines)
+            catch (StringStructureException x)
             {
-                string c = item.Trim().Replace("\t", "");
-
-                if (!c.Contains(";") && !c.Contains("."))
-                {
-                    throw new StringStructureException($"INVALID FORMAT! Format must be like: {Messages.formatExample}");
-                }
-
-
-                string[] fullString = c.Split(";");
-                list.Add(new NameInfo(fullString[0], fullString[1]));
+                MessageBox.Show(x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            FormatTxtNamesInfo();
-            BatBuilder b = new BatBuilder(list);
-            progressBar.Value = 2;
-            b.CreateAndWriteFile(pathWithArchive);
-            b.Execute(pathWithArchive, path);
-
-            // ProgressBar
-            int maximun = list.Count;
-            progressBar.Maximum = maximun;
-            for (int i = 0; i <= maximun; i++)
+            catch (IOException x)
             {
-                progressBar.Value = i;
+                MessageBox.Show(x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            b.RemoveBat(pathWithArchive);
-            MessageBox.Show("All file(s) renamed.", "Success!");
-            Reset();
+            catch (Break x)
+            {
+
+            }
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -116,10 +154,11 @@ namespace BatRenamer.GUI
 
         private void Reset()
         {
-            if (!GBNameList.Enabled) 
+            if (!GBNameList.Enabled)
             {
                 return;
             }
+            txtDirectory.Clear();
             progressBar.Value = 0;
             txtNamesInfo.Clear();
             GBNameList.Enabled = false;

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.GUI\\BatRenamer.GUI.csproj": {}
+    "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.GUI\\BatRenamer.GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.GUI\\BatRenamer.GUI.csproj": {
+    "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.GUI\\BatRenamer.GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.GUI\\BatRenamer.GUI.csproj",
+        "projectUniqueName": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.GUI\\BatRenamer.GUI.csproj",
         "projectName": "BatRenamer.GUI",
-        "projectPath": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.GUI\\BatRenamer.GUI.csproj",
-        "packagesPath": "C:\\Users\\weverton.ferreira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.GUI\\obj\\",
+        "projectPath": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.GUI\\BatRenamer.GUI.csproj",
+        "packagesPath": "C:\\Users\\verta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.GUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\weverton.ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\verta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj": {
-                "projectPath": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj"
+              "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj": {
+                "projectPath": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj"
               }
             }
           }
@@ -57,6 +57,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -69,20 +83,20 @@
         }
       }
     },
-    "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj": {
+    "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj",
+        "projectUniqueName": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj",
         "projectName": "BatRenamer.Models",
-        "projectPath": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj",
-        "packagesPath": "C:\\Users\\weverton.ferreira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer.Models\\obj\\",
+        "projectPath": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj",
+        "packagesPath": "C:\\Users\\verta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\weverton.ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\verta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -118,6 +132,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
