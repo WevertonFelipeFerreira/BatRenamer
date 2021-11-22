@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using BatRenamer.Entities;
+using BatRenamer.Models.Entities;
+using System.Diagnostics;
 
-namespace BatRenamer.Services
+namespace BatRenamer.Models.Services
 {
     public class BatBuilder
     {
@@ -43,16 +44,17 @@ namespace BatRenamer.Services
             }
             catch (IOException e) 
             {
-                throw new IOException("Folder not found!");
+                throw new IOException("Folder not found! "+e.Message);
             }
         }
 
         public void Execute(string pathWithArchive,string pathBase) 
         {
-            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            Process proc = new Process();
             proc.StartInfo.FileName = pathWithArchive;
             proc.StartInfo.WorkingDirectory = pathBase;
             proc.Start();
+            proc.WaitForExit(9000);
         }
 
         public void RemoveBat(string path) 

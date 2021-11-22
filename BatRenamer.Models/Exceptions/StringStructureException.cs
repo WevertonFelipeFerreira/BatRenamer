@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace BatRenamer.Exceptions
+namespace BatRenamer.Models.Exceptions
 {
-    class StringStructureException : FormatException
+    public class StringStructureException : FormatException
     {
         public StringStructureException() : base() 
         {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading;
-using BatRenamer.Entities;
-using BatRenamer.Services;
-using BatRenamer.Exceptions;
+using BatRenamer.Models.Entities;
+using BatRenamer.Models.Services;
+using BatRenamer.Models.Exceptions;
+using BatRenamer.Models;
 
 namespace BatRenamer
 {
@@ -16,24 +16,24 @@ namespace BatRenamer
             {
                 // Iinitial variables
                 List<NameInfo> list = new List<NameInfo>();
-                string formatExample = "OriginalName.jpg;Renamed.jpg";
 
                 Console.Write("Enter the folder where the files to be renamed are located: ");
                 string path = @Console.ReadLine();
                 string pathWithArchive = @path + @"\Renamer.bat";
                 bool cont = true;
-                Console.WriteLine($"\nEnter the original filename, then enter the name you want to rename, separated by a semicolon.EX: '{formatExample}'\n");
+                Console.WriteLine($"\nEnter the original file names, then enter the name you want to rename, separated by a semicolon.EX: '{Messages.formatExample}'\n");
                 do
                 {
-                    string c = Console.ReadLine();
+                    string c = Console.ReadLine().Trim();
                     if (string.IsNullOrEmpty(c))
                     {
                         break;
                     }
                     if (!c.Contains(";") || !c.Contains("."))
                     {
-                        throw new StringStructureException($"INVALID FORMAT! Format must be like: {formatExample}");
+                        throw new StringStructureException($"INVALID FORMAT! Format must be like: {Messages.formatExample}");
                     }
+
 
                     string[] fullString = c.Split(";");
                     list.Add(new NameInfo(fullString[0], fullString[1]));
@@ -45,9 +45,8 @@ namespace BatRenamer
 
                 // Process to create, write, execute and delete the BAT file
                 b.CreateAndWriteFile(pathWithArchive);
+                Console.WriteLine("PROCESSING...");
                 b.Execute(pathWithArchive, path);
-                Console.WriteLine("PROCESSING....");
-                Thread.Sleep(5000);
                 b.RemoveBat(pathWithArchive);
                 Console.WriteLine("\nFile(s) renamed!");
 

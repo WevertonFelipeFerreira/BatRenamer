@@ -1,30 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "BatRenamer.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BatRenamer.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BatRenamer.Models.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BatRenamer.Models/1.0.0": {
+      "type": "project",
+      "path": "../BatRenamer.Models/BatRenamer.Models.csproj",
+      "msbuildProject": "../BatRenamer.Models/BatRenamer.Models.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "BatRenamer.Models >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\weverton.ferreira\\.nuget\\packages\\": {},
+    "C:\\Users\\verta\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer\\BatRenamer.csproj",
+      "projectUniqueName": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer\\BatRenamer.csproj",
       "projectName": "BatRenamer",
-      "projectPath": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer\\BatRenamer.csproj",
-      "packagesPath": "C:\\Users\\weverton.ferreira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\weverton.ferreira\\source\\repos\\BatRenamer\\BatRenamer\\obj\\",
+      "projectPath": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer\\BatRenamer.csproj",
+      "packagesPath": "C:\\Users\\verta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\weverton.ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\verta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -38,7 +57,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj": {
+              "projectPath": "C:\\Users\\verta\\source\\repos\\BatRenamer\\BatRenamer.Models\\BatRenamer.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -60,12 +83,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
